@@ -19,7 +19,7 @@
  .s13 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
  table, tbody {vertical-align: top; overflow: visible; }
 </style>
-<div id="content" style="text-align: -webkit-center">
+<div id="content" style="width: fit-content; padding: 30px;">
     <table style="border-collapse:collapse;" cellspacing="0" id="pdf_content">
         <tr style="height:71pt">
             <td style="width:72pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -85,7 +85,7 @@
 <script>
 $('#downloadPDF').click(function () {
   debugger
-    domtoimage.toPng(document.getElementById('pdf_content'))
+    domtoimage.toPng(document.getElementById('content'))
         .then(function (blob) {
             var pdf = new jsPDF("p", "mm", "a4");
 
